@@ -1,6 +1,6 @@
 import { Avatar, Box, ButtonBase } from '@mui/material';
 import WidgetsIcon from '@mui/icons-material/Widgets';
-import { useTheme } from '@mui/system';
+import { useTheme } from '@mui/material/styles';
 
 import { LogoSection } from '../LogoSection';
 import { SearchSection } from './SearchSection';

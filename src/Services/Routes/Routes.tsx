@@ -12,7 +12,7 @@ import Themes from '../../Themes/Components/Theme';
 import { useAppSelector } from "../../Services/Hook/Hook";
 import { getCustomizationState } from "../../Themes/Reducer/customizationActions";
 
-import { getAuthUser } from "../Methods/AuthMethods";
+import { getAuthToken } from "../Methods/AuthMethods";
 // import { config } from '../Config/Config';
 
 import { AuthLayout } from '../../Layout/AuthLayout';
@@ -30,7 +30,7 @@ export const GeneralRoutes = React.memo(() => {
 
   const PrivateRoute: FC<PropType> = ({ component: Component, auth: Auth }) => {
     if (Auth) {
-      const data=getAuthUser();
+      const data = getAuthToken();
       if (data) { return <Component />; }
       else { return <Navigate to="/login" />; }
     }
@@ -47,11 +47,8 @@ export const GeneralRoutes = React.memo(() => {
       for (let item of router) {
         let elementPath = item.elementPath;
         let auth = item.auth;
-
         if (moduleName && elementPath) {
           const generated = lazy(() => import(`../../Modules/${moduleName}/Views/${elementPath}.tsx`));     /* @vite-ignore */
-          console.log(generated,"generated");
-          
           element.push(
             <Routes key={elementPath}>
               {item.path === "/login" &&
@@ -82,9 +79,7 @@ export const GeneralRoutes = React.memo(() => {
           <CssBaseline />
           <NavigationScroll>
             <Suspense fallback={<LazyLoader />}>
-              <>
                 {renderGeneratedRoutes}
-              </>
             </Suspense>
           </NavigationScroll>
         </ThemeProvider>

@@ -18,7 +18,7 @@ export type TypeOfMenuPages = {
     type: 'group' | 'collapse' | 'item',
     icon?: any,
     children?: any,
-    url: string ,
+    url: string,
     target?: boolean,
     breadcrumbs?: boolean,
     external?: boolean,
@@ -27,7 +27,7 @@ export type TypeOfMenuPages = {
 }
 
 const menuItems = {
-    items: [Auth, Dashboard]
+    items: [Dashboard, Auth]
 };
 
 export default menuItems;
