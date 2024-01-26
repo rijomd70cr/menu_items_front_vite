@@ -1,9 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 import { Card, CardContent, CardHeader, Divider, Typography } from '@mui/material';
 
-const headerSX = {
-  '& .MuiCardHeader-action': { mr: 0 }
-};
+const headerSX = { '& .MuiCardHeader-action': { mr: 0 } };
 
 type TypeMainCard = {
   border?: boolean;
@@ -19,7 +17,7 @@ type TypeMainCard = {
 }
 
 export const MainCard = ({ border = true, boxShadow, children, content = true, contentClass = '',
-  contentSX = {}, darkTitle = false, secondary, shadow, sx = {}, title, ...others }: TypeMainCard,) => {
+  contentSX = {}, darkTitle = false, secondary, shadow, sx = {}, title, ...others }: TypeMainCard) => {
   const theme = useTheme();
 
   return (
@@ -28,9 +26,7 @@ export const MainCard = ({ border = true, boxShadow, children, content = true, c
       sx={{
         border: border ? '1px solid' : 'none',
         borderColor: theme.palette.primary.main[200] + 25,
-        ':hover': {
-          boxShadow: boxShadow ? shadow || '0 2px 14px 0 rgb(32 40 45 / 8%)' : 'inherit'
-        },
+        ':hover': { boxShadow: boxShadow ? shadow || '0 2px 14px 0 rgb(32 40 45 / 8%)' : 'inherit' },
         ...sx
       }}
     >

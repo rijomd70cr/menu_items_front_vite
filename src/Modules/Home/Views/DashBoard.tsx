@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 
-import { gridSpacing } from "../../../Services/Store/GridConstant";
+import { gridSpacing } from "Services/Store/GridConstant";
 
 const DashBoard = () => {
     return (

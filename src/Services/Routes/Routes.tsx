@@ -5,19 +5,18 @@ import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
 
 import containers from "../../Modules";
-import { NavigationScroll } from "../../Layout/NavigationScroll";
-import { LazyLoader } from "../../Components/Loader/LazyLoader";
-import Themes from '../../Themes/Components/Theme';
+import { NavigationScroll } from "Layout/NavigationScroll";
+import { LazyLoader } from "Components/Loader/LazyLoader";
+import Themes from 'Themes/Components/Theme';
 
-import { useAppSelector } from "../../Services/Hook/Hook";
-import { getCustomizationState } from "../../Themes/Reducer/customizationActions";
+import { useAppSelector } from "Services/Hook/Hook";
+import { getCustomizationState } from "Themes/Reducer/customizationActions";
 
 import { getAuthToken } from "../Methods/AuthMethods";
 // import { config } from '../Config/Config';
 
-import { AuthLayout } from '../../Layout/AuthLayout';
-import { MainLayout } from '../../Layout/MainLayout';
-
+import { AuthLayout } from 'Layout/AuthLayout';
+import { MainLayout } from 'Layout/MainLayout';
 
 type PropType = {
   component: React.FC;

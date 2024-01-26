@@ -11,9 +11,9 @@ import { AuthFooter } from "../Components/AuthFooter";
 
 import { loginAction, authenticationState } from "../Reducer/AuthAction";
 
-import { Logo } from "../../../Components/LogoSection/Logo";
-import { useAppDispatch, useAppSelector } from "../../../Services/Hook/Hook";
-import { useNotify } from "../../../Services/Hook/useNotify";
+import { Logo } from "Components/LogoSection/Logo";
+import { useAppDispatch, useAppSelector } from "Services/Hook/Hook";
+import { useNotify } from "Services/Hook/useNotify";
 
 const Login = () => {
   const theme = useTheme();

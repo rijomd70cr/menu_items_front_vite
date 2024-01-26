@@ -10,8 +10,8 @@ import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 import HomeIcon from '@mui/icons-material/Home';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
-import { config } from '../../Services/Config/Config';
-import { gridSpacing } from '../../Services/Store/GridConstant';
+import { config } from 'Services/Config/Config';
+import { gridSpacing } from 'Services/Store/GridConstant';
 
 import { TypeOfMenuPages } from '../../MenuItems'
 

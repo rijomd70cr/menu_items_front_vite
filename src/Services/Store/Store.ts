@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import Module from "../../Modules";
 
-import customizationReducer from '../../Themes/Reducer/customizationSlice';
+import customizationReducer from 'Themes/Reducer/customizationSlice';
 
 // Adding reducers of each modules
 let reducer = {};

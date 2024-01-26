@@ -7,8 +7,8 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import MenuList from './MenuList';
 import { LogoSection } from '../LogoSection';
 import { MenuCard } from './MenuCard';
-import { drawerWidth } from '../../../Services/Store/GridConstant';
-import { REACT_APP_VERSION } from '../../../Services/Config/Config';
+import { drawerWidth } from 'Services/Store/GridConstant';
+import { REACT_APP_VERSION } from 'Services/Config/Config';
 
 type TypeSidebar = {
   drawerOpen: boolean;

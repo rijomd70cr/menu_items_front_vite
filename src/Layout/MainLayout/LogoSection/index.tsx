@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ButtonBase } from '@mui/material';
 
-import { config } from '../../../Services/Config/Config';
-import { Logo } from '../../../Components/LogoSection/Logo';
+import { config } from 'Services/Config/Config';
+import { Logo } from 'Components/LogoSection/Logo';
 
-import { useAppDispatch, useAppSelector } from "../../../Services/Hook/Hook";
-import { setOpenMenuAction, getCustomizationState } from "../../../Themes/Reducer/customizationActions";
+import { useAppDispatch, useAppSelector } from "Services/Hook/Hook";
+import { setOpenMenuAction, getCustomizationState } from "Themes/Reducer/customizationActions";
 
 export const LogoSection = () => {
   const customization = useAppSelector(getCustomizationState);

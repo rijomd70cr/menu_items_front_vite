@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 import { useTheme } from '@mui/material/styles';
 import { Drawer, Fab, FormControl, FormControlLabel, Grid, IconButton, Radio, RadioGroup, Tooltip } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 
-import PerfectScrollbar from 'react-perfect-scrollbar';
 
-import { SubCard } from '../../Components/Cards/SubCard';
-import { AnimateButton } from '../../Components/Extend/AnimateButton';
+import { SubCard } from 'Components/Cards/SubCard';
+import { AnimateButton } from 'Components/Extend/AnimateButton';
 
-import { gridSpacing } from '../../Services/Store/GridConstant';
-import { useAppDispatch, useAppSelector } from "../../Services/Hook/Hook";
-import { getCustomizationState, setFontFamilyAction } from "../../Themes/Reducer/customizationActions";
+import { gridSpacing } from 'Services/Store/GridConstant';
+import { useAppDispatch, useAppSelector } from "Services/Hook/Hook";
+import { getCustomizationState, setFontFamilyAction } from "Themes/Reducer/customizationActions";
 
 
 export const Customization = () => {

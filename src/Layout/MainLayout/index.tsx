@@ -4,16 +4,16 @@ import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-import { Breadcrumbs } from '../../Components/Extend/Breadcrumbs';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import navigation from '../../MenuItems';
-
 import { Customization } from '../Customization';
-import { getCustomizationState, setOpenDrawerAction } from "../../Themes/Reducer/customizationActions";
 
-import { drawerWidth } from '../../Services/Store/GridConstant';
-import { useAppDispatch, useAppSelector } from "../../Services/Hook/Hook";
+import { Breadcrumbs } from 'Components/Extend/Breadcrumbs';
+import { getCustomizationState, setOpenDrawerAction } from "Themes/Reducer/customizationActions";
+
+import { drawerWidth } from 'Services/Store/GridConstant';
+import { useAppDispatch, useAppSelector } from "Services/Hook/Hook";
 
 
 export const MainLayout = () => {

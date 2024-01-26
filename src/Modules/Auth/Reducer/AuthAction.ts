@@ -5,7 +5,7 @@ import { RootState } from "../../../Services/Store/Store";
 import axios from "../../../Services/Request";
 
 import { loginUrl } from "../Config/urlConstants";
-import { AUTH_USER, ACCESS_TOKEN } from "../../../Services/Methods/AuthMethods";
+import { AUTH_USER, ACCESS_TOKEN } from "Services/Methods/AuthMethods";
 
 export const authenticationState = (state: RootState) => state.auth;
 

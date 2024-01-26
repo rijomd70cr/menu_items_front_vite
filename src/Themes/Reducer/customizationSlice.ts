@@ -1,6 +1,6 @@
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { config } from "../../Services/Config/Config";
+import { config } from "Services/Config/Config";
 
 export interface TypesCustomization {
     isOpen: any[],

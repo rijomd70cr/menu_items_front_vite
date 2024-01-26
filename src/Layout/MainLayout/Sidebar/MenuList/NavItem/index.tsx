@@ -5,8 +5,8 @@ import { useTheme } from '@mui/material/styles';
 import { Avatar, Chip, ListItemButton, ListItemIcon, ListItemText, Typography, useMediaQuery } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
-import { useAppDispatch, useAppSelector } from "../../../../../Services/Hook/Hook";
-import { getCustomizationState, setOpenDrawerAction, setOpenMenuAction } from "../../../../../Themes/Reducer/customizationActions";
+import { useAppDispatch, useAppSelector } from "Services/Hook/Hook";
+import { getCustomizationState, setOpenDrawerAction, setOpenMenuAction } from "Themes/Reducer/customizationActions";
 import { TypeOfMenuPages } from "../../../../../MenuItems"
 
 

@@ -11,8 +11,8 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { NavItem } from '../NavItem';
 import { TypeOfMenuPages } from "../../../../../MenuItems";
 
-import { useAppSelector } from "../../../../../Services/Hook/Hook";
-import { getCustomizationState } from "../../../../../Themes/Reducer/customizationActions";
+import { useAppSelector } from "Services/Hook/Hook";
+import { getCustomizationState } from "Themes/Reducer/customizationActions";
 
 export const NavCollapse = ({ menu, level }: { menu: TypeOfMenuPages, level: number }) => {
   const theme = useTheme();

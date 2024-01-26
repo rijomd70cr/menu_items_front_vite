@@ -1,4 +1,5 @@
 import { useState, ChangeEvent } from 'react';
+import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
 
 import { useTheme, styled } from '@mui/material/styles';
 import { Avatar, Box, ButtonBase, Card, Grid, InputAdornment, OutlinedInput, Popper } from '@mui/material';
@@ -8,10 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import CancelIcon from '@mui/icons-material/Cancel';
 
-import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
-
-import { Transitions } from '../../../../Components/Extend/Transitions';
-
+import { Transitions } from 'Components/Extend/Transitions';
 
 const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
   zIndex: 1100,

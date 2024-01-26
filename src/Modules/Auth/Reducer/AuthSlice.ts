@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { loginAction } from "../Reducer/AuthAction";
-import { ACCESS_TOKEN, AUTH_USER } from "../../../Services/Methods/AuthMethods";
+import { ACCESS_TOKEN, AUTH_USER } from "Services/Methods/AuthMethods";
 
 import { errorMessage ,successMessage } from "../Config/Constants";
 export interface CounterState {

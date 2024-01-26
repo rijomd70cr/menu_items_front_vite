@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { MainCard } from '../../../Components/Cards/MainCard';
+import { MainCard } from 'Components/Cards/MainCard';
 
 type TypeAuthCardWrapper = {
   children: React.ReactElement;
@@ -17,6 +17,7 @@ export const AuthCardWrapper = ({ children, ...other }: TypeAuthCardWrapper) => 
       }
     }}
     content={false}
+    title=''
     {...other}
   >
     <Box sx={{ p: { xs: 2, sm: 3, xl: 5 } }}>{children}</Box>

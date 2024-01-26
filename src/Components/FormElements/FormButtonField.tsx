@@ -2,7 +2,7 @@ import { CircularProgress, Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 import { OverridableStringUnion } from '@mui/types';
 
-import { FormElementsThemes } from "../../Themes/Components/FormElementsThemes";
+import { FormElementsThemes } from "Themes/Components/FormElementsThemes";
 
 export interface TextFieldPropsColorOverrides { }
 

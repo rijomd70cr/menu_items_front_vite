@@ -8,14 +8,14 @@ import { Box, Button, Divider, Grid, IconButton, Typography, useMediaQuery } fro
 import * as Yup from "yup";
 import { Formik } from "formik";
 
-import { AnimateButton } from "../../../../Components/Extend/AnimateButton";
-import { FormTextField } from "../../../../Components/FormElements/FormTextField";
-import { FormButtonField } from "../../../../Components/FormElements/FormButtonField";
+import { AnimateButton } from "Components/Extend/AnimateButton";
+import { FormTextField } from "Components/FormElements/FormTextField";
+import { FormButtonField } from "Components/FormElements/FormButtonField";
 
-import { getCustomizationState } from "../../../../Themes/Reducer/customizationActions";
-import { useAppSelector } from "../../../../Services/Hook/Hook";
+import { getCustomizationState } from "Themes/Reducer/customizationActions";
+import { useAppSelector } from "Services/Hook/Hook";
 
-import Google from "../../../../Assets/images/social-google.svg";
+import Google from "Assets/images/social-google.svg";
 
 export const AuthLogin = ({ handleSubmit }: { handleSubmit: (data: any) => any; }) => {
   const theme = useTheme();

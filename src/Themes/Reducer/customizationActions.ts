@@ -1,4 +1,4 @@
-import { RootState, AppThunk } from "../../Services/Store/Store";
+import { RootState, AppThunk } from "Services/Store/Store";
 import { setFontFamily, openDrawer, openMenu } from "../Reducer/customizationSlice";
 
 export const getCustomizationState = (state: RootState) => state.customization;
