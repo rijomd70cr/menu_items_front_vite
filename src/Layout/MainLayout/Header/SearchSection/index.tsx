@@ -6,7 +6,7 @@ import { shouldForwardProp } from '@mui/system';
 
 import SearchIcon from '@mui/icons-material/Search';
 import AssessmentIcon from '@mui/icons-material/Assessment';
-import FilePresentIcon from '@mui/icons-material/FilePresent';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
 
@@ -53,25 +53,6 @@ const HeaderAvatarStyle = styled(Avatar, { shouldForwardProp })(({ theme }) => (
   }
 }));
 
-// type AnchorOrigin = {
-//   vertical: 'top' | 'bottom';
-//   horizontal: 'left' | 'center' | 'right';
-// };
-
-// type TransformOrigin = {
-//   vertical: 'top' | 'bottom';
-//   horizontal: 'left' | 'center' | 'right';
-// };
-
-// type PopupStateOptions = {
-//   anchorOrigin?: AnchorOrigin;
-//   transformOrigin?: TransformOrigin;
-//   disableAutoFocus?: boolean;
-//   disableEnforceFocus?: boolean;
-//   disableRestoreFocus?: boolean;
-//   [others: string]: any;
-// };
-
 type TypeMobileSearch = {
   value: string;
   setValue: (data: any) => void;
@@ -115,7 +96,7 @@ const MobileSearch = ({ value, setValue = () => { }, popupState }: TypeMobileSea
                 }}
                 {...bindToggle(popupState)}
               >
-                <FilePresentIcon />
+                <CancelIcon />
               </Avatar>
             </ButtonBase>
           </Box>

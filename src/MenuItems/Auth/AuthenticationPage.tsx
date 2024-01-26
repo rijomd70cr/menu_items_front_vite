@@ -7,7 +7,6 @@ const icons = { CottageIcon };
 export const Auth: TypeOfMenuPages = {
     id: 'auth',
     title: 'Auth',
-    // caption: 'Auth Caption',
     type: 'group',
     url: "",
     children: [

@@ -7,7 +7,7 @@ const icons = { CottageIcon };
 export const Dashboard: TypeOfMenuPages = {
     id: 'home',
     title: 'Home',
-    caption: 'Home page',
+    // caption: 'Home page',
     type: 'group',
     url: "",
     children: [
@@ -17,7 +17,7 @@ export const Dashboard: TypeOfMenuPages = {
             type: 'item',
             icon: icons.CottageIcon,
             url: '/',
-            breadcrumbs: false
+            breadcrumbs: true
         }
     ]
 };

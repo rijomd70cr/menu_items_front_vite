@@ -15,4 +15,4 @@ export const config: TypeConfig = {
     borderRadius: 12
 };
 
-export const REACT_APP_VERSION: string = "1.0.0";
+export const REACT_APP_VERSION: string = "Version - 1.0";
