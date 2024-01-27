@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
@@ -31,7 +31,7 @@ export const MainLayout = () => {
     ...theme.typography.body1,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
-    marginTop:88,
+    marginTop: 88,
     transition: theme.transitions.create(
       'margin',
       leftDrawerOpened
@@ -46,7 +46,8 @@ export const MainLayout = () => {
     ),
     [theme.breakpoints.up('md')]: {
       marginLeft: leftDrawerOpened ? 0 : -(drawerWidth - 20),
-      width: `calc(100% - ${drawerWidth}px)`
+      width: `calc(100% - ${drawerWidth}px)`,
+      // width: leftDrawerOpened ? '100%' : `calc(100% - ${drawerWidth}px)`
     },
     [theme.breakpoints.down('md')]: {
       marginLeft: '20px',
@@ -86,7 +87,7 @@ export const MainLayout = () => {
 
       {/* main content */}
       <Main theme={theme} >
-        <Breadcrumbs separator={ArrowForwardIosIcon} navigation={navigation} icon title rightAlign />
+        <Breadcrumbs separator={KeyboardArrowRightIcon} navigation={navigation} icon title rightAlign divider />
         <Outlet />
       </Main>
 

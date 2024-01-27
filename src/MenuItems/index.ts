@@ -16,7 +16,8 @@ export type TypeOfMenuPages = {
     title: string,
     caption?: string,
     type: 'group' | 'collapse' | 'item',
-    icon?: any,
+    icon?: any, //icon
+    separator?:any, // breadcrumbs separator
     children?: any,
     url: string,
     target?: boolean,
@@ -24,7 +25,7 @@ export type TypeOfMenuPages = {
     external?: boolean,
     disabled?: boolean,
     chip?: TypeChip,
-    titleBottom?:string
+    titleBottom?:boolean
 }
 
 const menuItems = {

@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
 import { useTheme } from '@mui/material/styles';
 import { Box, Card, Divider, Grid, Typography } from '@mui/material';
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
@@ -20,13 +18,12 @@ const linkSX = {
   color: 'grey.900',
   textDecoration: 'none',
   alignContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
 };
 
 export type TypesBreadcrumbs = {
   title: boolean,
   navigation: any,
-  card?: boolean,
   divider?: boolean,
   icon?: boolean,
   icons?: boolean,
@@ -37,14 +34,12 @@ export type TypesBreadcrumbs = {
 }
 
 export const Breadcrumbs = (props: TypesBreadcrumbs) => {
-  const { card, divider, icon, icons, maxItems, navigation, rightAlign, separator, title, titleBottom } = props;
+  const { divider = false, icon, icons, maxItems, navigation, rightAlign, separator, title, titleBottom } = props;
   const theme = useTheme();
 
   const iconStyle = {
     marginRight: theme.spacing(0.75),
     marginTop: `-${theme.spacing(0.25)}`,
-    width: '1rem',
-    height: '1rem',
     color: theme.palette.secondary.main
   };
 
@@ -95,7 +90,7 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
   if (main && main.type === 'collapse') {
     CollapseIcon = main.icon ? main.icon : AccountTreeTwoToneIcon;
     mainContent = (
-      <Typography component={Link} to="#" variant="subtitle1" sx={linkSX}>
+      <Typography variant="subtitle1" sx={linkSX}>
         {icons && <CollapseIcon style={iconStyle} />}
         {main.title}
       </Typography>
@@ -128,13 +123,11 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
       breadcrumbContent = (
         <Card
           sx={{
-            marginBottom: card === false ? 0 : theme.spacing(gridSpacing),
-            border: card === false ? 'none' : '1px solid',
-            borderColor: theme.palette.primary.main[200] + 75,
-            background: card === false ? 'transparent' : theme.palette.background.default
+            marginBottom: divider !== false ? theme.spacing(gridSpacing) : 0,
+            background: theme.palette.background.default
           }}
         >
-          <Box sx={{ p: 2, pl: card === false ? 0 : 2 }}>
+          <Box sx={{ p: 1 }}>
             <Grid
               container
               direction={rightAlign ? 'row' : 'column'}
@@ -144,7 +137,7 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
             >
               {title && !titleBottom && (
                 <Grid item>
-                  <Typography variant="h3" sx={{ fontWeight: 500 }}>
+                  <Typography variant="h4" sx={{ fontWeight: 500, color: theme.palette.secondary.dark }}>
                     {item.title}
                   </Typography>
                 </Grid>
@@ -156,10 +149,10 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
                   maxItems={maxItems || 8}
                   separator={separatorIcon}
                 >
-                  <Typography component={Link} to="/" color="inherit" variant="subtitle1" sx={linkSX}>
+                  <Typography color="inherit" variant="subtitle1" sx={linkSX}>
                     {icons && <HomeTwoToneIcon sx={iconStyle} />}
                     {icon && <HomeIcon sx={{ ...iconStyle, mr: 0 }} />}
-                    {!icon && 'Dashboard'}
+                    {!icon && 'Home'}
                   </Typography>
                   {mainContent}
                   {itemContent}
@@ -174,7 +167,7 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
               )}
             </Grid>
           </Box>
-          {card === false && divider !== false && <Divider sx={{ borderColor: theme.palette.primary.main, mb: gridSpacing }} />}
+          {divider !== false && <Divider sx={{ borderColor: theme.palette.secondary.light, mb: gridSpacing }} />}
         </Card>
       );
     }
