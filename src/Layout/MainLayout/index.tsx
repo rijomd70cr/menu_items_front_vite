@@ -31,6 +31,7 @@ export const MainLayout = () => {
     ...theme.typography.body1,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
+    marginTop:88,
     transition: theme.transitions.create(
       'margin',
       leftDrawerOpened

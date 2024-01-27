@@ -5,6 +5,12 @@ const Routes = [
         elementPath: "DashBoard",
         auth: true,
     },
+    {
+        name: "DashBoard1",
+        path: "/dashboard1",
+        elementPath: "DashBoard",
+        auth: true,
+    },
 ]
 
 export default Routes;

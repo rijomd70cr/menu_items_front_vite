@@ -17,7 +17,7 @@ export const Auth: TypeOfMenuPages = {
             icon: icons.CottageIcon,
             children: [
                 {
-                    id: 'login3',
+                    id: 'login',
                     title: 'Login',
                     type: 'item',
                     url: '/login',

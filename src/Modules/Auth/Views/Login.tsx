@@ -14,6 +14,7 @@ import { loginAction, authenticationState } from "../Reducer/AuthAction";
 import { Logo } from "Components/LogoSection/Logo";
 import { useAppDispatch, useAppSelector } from "Services/Hook/Hook";
 import { useNotify } from "Services/Hook/useNotify";
+import { config } from 'Services/Config/Config';
 
 const Login = () => {
   const theme = useTheme();
@@ -26,12 +27,12 @@ const Login = () => {
   React.useEffect(() => {
     if (authentication.status === "success") {
       useNotify(authentication.error, "success");
-      navigate("/");
+      navigate(config.defaultPath);
     }
     if (authentication.status === "failed") {
       useNotify(authentication.error, "error");
     }
-    return () => {};
+    return () => { };
   }, [authentication.status]);
 
   const handleSubmit = async (data: any) => {

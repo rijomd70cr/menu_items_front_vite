@@ -23,7 +23,8 @@ export type TypeOfMenuPages = {
     breadcrumbs?: boolean,
     external?: boolean,
     disabled?: boolean,
-    chip?: TypeChip
+    chip?: TypeChip,
+    titleBottom?:string
 }
 
 const menuItems = {

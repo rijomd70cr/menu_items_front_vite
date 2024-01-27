@@ -6,7 +6,7 @@ const DashBoard = () => {
     return (
         <Grid container spacing={gridSpacing}>
             <Grid item xs={12}>
-                Dashboard
+                Dashboard Dashboard Dashboard
             </Grid>
         </Grid>
     )

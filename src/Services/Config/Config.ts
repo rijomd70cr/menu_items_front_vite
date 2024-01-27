@@ -10,7 +10,7 @@ export type TypeConfig = {
 
 export const config: TypeConfig = {
     basename: '/starter',
-    defaultPath: '/',
+    defaultPath: '/dashboard1',
     fontFamily: `'Roboto', sans-serif`,
     borderRadius: 12
 };

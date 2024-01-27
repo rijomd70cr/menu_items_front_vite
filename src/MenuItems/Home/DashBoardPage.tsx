@@ -16,7 +16,7 @@ export const Dashboard: TypeOfMenuPages = {
             title: 'Dashboard',
             type: 'item',
             icon: icons.CottageIcon,
-            url: '/',
+            url: '/dashboard1',
             breadcrumbs: true
         }
     ]
