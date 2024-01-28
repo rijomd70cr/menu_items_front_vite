@@ -47,7 +47,6 @@ export const SnackBar = (props: Props) => {
     });
 
     return (
-        <div>
             <Stack spacing={2} sx={{ width: '100%' }}>
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}
                     anchorOrigin={{ vertical, horizontal }} TransitionComponent={state.Transition}
@@ -55,6 +54,5 @@ export const SnackBar = (props: Props) => {
                     <Alert onClose={handleClose} severity={typeOfAlert} sx={{ width: '100%' }}>{message}</Alert>
                 </Snackbar>
             </Stack>
-        </div>
     )
 }

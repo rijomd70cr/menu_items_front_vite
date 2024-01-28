@@ -123,7 +123,7 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
       breadcrumbContent = (
         <Card
           sx={{
-            marginBottom: divider !== false ? theme.spacing(gridSpacing) : 0,
+            marginBottom: "2px",
             background: theme.palette.background.default
           }}
         >
@@ -167,7 +167,7 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
               )}
             </Grid>
           </Box>
-          {divider !== false && <Divider sx={{ borderColor: theme.palette.secondary.light, mb: gridSpacing }} />}
+          {divider !== false && <Divider sx={{ borderColor: theme.palette.secondary.dark, mb: gridSpacing }} />}
         </Card>
       );
     }

@@ -62,6 +62,7 @@ const MobileSearch = ({ value, setValue = () => { }, popupState }: TypeMobileSea
 
   return (
     <OutlineInputStyle
+      sx={{ background: "#fff" }}
       id="input-search-header"
       value={value}
       onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setValue(e.target.value)}
@@ -157,6 +158,7 @@ export const SearchSection = () => {
       <Box sx={{ display: { xs: 'none', md: 'block' } }}>
         <OutlineInputStyle
           id="input-search-header"
+          sx={{ background: "#fff" }}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Search"
