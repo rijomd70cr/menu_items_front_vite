@@ -64,7 +64,7 @@ export const MainLayout = () => {
 
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: '100vh' }}>
       <CssBaseline />
       {/* header */}
       <AppBar
@@ -87,7 +87,7 @@ export const MainLayout = () => {
 
       {/* main content */}
       <Main theme={theme} >
-        <Breadcrumbs separator={KeyboardArrowRightIcon} navigation={navigation} icon title rightAlign divider />
+        <Breadcrumbs separator={KeyboardArrowRightIcon} navigation={navigation} icon title rightAlign />
         <Outlet />
       </Main>
 

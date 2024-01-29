@@ -6,6 +6,9 @@ import {
 
 import TableChartOutlinedIcon from '@mui/icons-material/TableChartOutlined';
 
+// import { getCustomizationState } from "Themes/Reducer/customizationActions";
+// import { useAppSelector } from "Services/Hook/Hook";
+
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   borderRadius: 30,
@@ -18,6 +21,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   }
 }));
 
+//change background with page outline background : -not now (from customization reducer)
 const CardStyle = styled(Card)(({ theme }) => ({
   background: theme.palette.primary.light,
   marginBottom: '22px',
@@ -62,6 +66,7 @@ function LinearProgressWithLabel({ value, ...others }: { value: number, [others:
 
 export const MenuCard = () => {
   const theme = useTheme();
+  // const customization = useAppSelector(getCustomizationState);
 
   return (
     <CardStyle>

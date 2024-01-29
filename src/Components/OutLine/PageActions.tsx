@@ -1,4 +1,4 @@
-import { Box, SpeedDial, SpeedDialIcon, SpeedDialAction } from '@mui/material';
+import { SpeedDial, SpeedDialIcon, SpeedDialAction } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 
 import EditIcon from '@mui/icons-material/Edit';
@@ -24,6 +24,9 @@ export const PageActions = ({ direction = 'down', hidden = false, onClick = () =
 
     const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
         position: 'absolute',
+        top: '50%',
+        right: 0,
+        transform: 'translateY(-50%)',
         '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
             bottom: theme.spacing(2),
             right: theme.spacing(2),
@@ -36,43 +39,41 @@ export const PageActions = ({ direction = 'down', hidden = false, onClick = () =
 
     return (
         <>
-            <Box sx={{ transform: 'translateZ(0px)', position: 'relative', height: 320 }}>
-                <StyledSpeedDial
-                    ariaLabel="SpeedDial openIcon example"
-                    sx={{
-                        '& .MuiFab-primary':
-                        {
-                            width: 35, height: 35,
-                            '& .MuiSpeedDialIcon-icon': { fontSize: 20 }, borderRadius: "2%", backgroundColor: theme.palette.secondary.dark
-                        },
-                        position: "fixed",
-                        height: "40px",
-                        zIndex: theme.zIndex.speedDial
-                    }}
-                    icon={<SpeedDialIcon openIcon={<EditIcon />} />}
-                    direction={direction}
-                    hidden={hidden}
-                >
-                    {actions?.length > 0 && actions.map((action: TypeActions, key: number) => (
-                        <SpeedDialAction
-                            key={key}
-                            icon={action?.icon || <SaveIcon />}
-                            tooltipTitle={action.name}
-                            onClick={(e) => {
-                                if (action?.disable === true) { e.stopPropagation(); }
-                                else {
-                                    if (action?.onClick) { action?.onClick() }
-                                    else { action.name !== undefined && onClick(action.name); }
-                                }
-                            }}
-                            sx={{
-                                width: 35, height: 35, borderRadius: "2%",
-                                background: theme.palette.secondary.light, color: theme.palette?.[action.color || "secondary"].dark
-                            }}
-                        />
-                    ))}
-                </StyledSpeedDial>
-            </Box>
+            {/* <Box sx={{ transform: 'translateZ(0px)', position: 'relative', height: 320 }}> */}
+            <StyledSpeedDial
+                ariaLabel="SpeedDial openIcon example"
+                sx={{
+                    '& .MuiFab-primary':
+                    {
+                        width: 35, height: 35,
+                        '& .MuiSpeedDialIcon-icon': { fontSize: 20 }, borderRadius: "2%", backgroundColor: theme.palette.secondary.dark
+                    },
+                    height: "40px",
+                }}
+                icon={<SpeedDialIcon openIcon={<EditIcon />} />}
+                direction={direction}
+                hidden={hidden}
+            >
+                {actions?.length > 0 && actions.map((action: TypeActions, key: number) => (
+                    <SpeedDialAction
+                        key={key}
+                        icon={action?.icon || <SaveIcon />}
+                        tooltipTitle={action.name}
+                        onClick={(e) => {
+                            if (action?.disable === true) { e.stopPropagation(); }
+                            else {
+                                if (action?.onClick) { action?.onClick() }
+                                else { action.name !== undefined && onClick(action.name); }
+                            }
+                        }}
+                        sx={{
+                            width: 35, height: 35, borderRadius: "2%",
+                            background: theme.palette.secondary.light, color: theme.palette?.[action.color || "secondary"].dark
+                        }}
+                    />
+                ))}
+            </StyledSpeedDial>
+            {/* </Box> */}
         </>
     )
 }

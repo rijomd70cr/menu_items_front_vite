@@ -7,7 +7,9 @@ export interface TypesCustomization {
     defaultId: string,
     fontFamily: string,
     borderRadius: number
-    opened: boolean
+    opened: boolean,
+    pageStyle: { [others: string]: any; },
+    mainOutlineStyle: { [others: string]: any; }
 }
 
 const initialState: TypesCustomization = {
@@ -15,7 +17,9 @@ const initialState: TypesCustomization = {
     defaultId: 'default',
     fontFamily: config.fontFamily,
     borderRadius: config.borderRadius,
-    opened: true
+    opened: true,
+    pageStyle: {},
+    mainOutlineStyle: {}
 };
 
 export const customizationSlice = createSlice({
@@ -31,9 +35,16 @@ export const customizationSlice = createSlice({
         openDrawer: (state, action: PayloadAction<boolean>) => {
             state.opened = action.payload;
         },
-        
+        // currently not 
+        setPageOutlineDivTheme: (state, action: PayloadAction<any>) => {
+            state.pageStyle = { ...state.pageStyle, ...action.payload }
+        },
+        // currently not 
+        setMainOutlineDivTheme: (state, action: PayloadAction<any>) => {
+            state.mainOutlineStyle = { ...state.mainOutlineStyle, ...action.payload }
+        }
     },
 });
 
-export const { openDrawer, setFontFamily, openMenu } = customizationSlice.actions;
+export const { openDrawer, setFontFamily, openMenu, setPageOutlineDivTheme, setMainOutlineDivTheme } = customizationSlice.actions;
 export default customizationSlice.reducer; 

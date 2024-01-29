@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Box, Card, Divider, Grid, Typography } from '@mui/material';
+import { Box, Card, Grid, Typography } from '@mui/material';
 import MuiBreadcrumbs from '@mui/material/Breadcrumbs';
 
 import SpaIcon from '@mui/icons-material/Spa';
@@ -9,7 +9,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
 import { config } from 'Services/Config/Config';
-import { gridSpacing } from 'Services/Store/GridConstant';
 
 import { TypeOfMenuPages } from '../../MenuItems'
 
@@ -24,7 +23,6 @@ const linkSX = {
 export type TypesBreadcrumbs = {
   title: boolean,
   navigation: any,
-  divider?: boolean,
   icon?: boolean,
   icons?: boolean,
   maxItems?: number,
@@ -34,7 +32,7 @@ export type TypesBreadcrumbs = {
 }
 
 export const Breadcrumbs = (props: TypesBreadcrumbs) => {
-  const { divider = false, icon, icons, maxItems, navigation, rightAlign, separator, title, titleBottom } = props;
+  const { icon, icons, maxItems, navigation, rightAlign, separator, title, titleBottom } = props;
   const theme = useTheme();
 
   const iconStyle = {
@@ -167,7 +165,6 @@ export const Breadcrumbs = (props: TypesBreadcrumbs) => {
               )}
             </Grid>
           </Box>
-          {divider !== false && <Divider sx={{ borderColor: theme.palette.secondary.dark, mb: gridSpacing }} />}
         </Card>
       );
     }

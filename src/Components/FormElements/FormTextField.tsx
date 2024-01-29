@@ -1,8 +1,5 @@
 import React, { ChangeEvent } from "react";
 import { TextField, InputAdornment } from '@mui/material';
-import { OverridableStringUnion } from '@mui/types';
-
-export interface TextFieldPropsColorOverrides { }
 
 export type TextInterface = {
   label?: string;
@@ -14,20 +11,19 @@ export type TextInterface = {
   type?: string;
   fullWidth?: boolean;
   name: string;
-  color?: OverridableStringUnion<'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning', TextFieldPropsColorOverrides>;
   endAdornment?: any;
   startAdornment?: any;
   [others: string]: any;
 }
 
 export const FormTextField: React.FC<TextInterface> = (props) => {
-  const { label, placeholder, error, onChange = () => { }, value, required, type, fullWidth, name, color = 'primary', endAdornment, startAdornment, ...others } = props;
+  const { label, placeholder, error, onChange = () => { }, value, required, type, fullWidth, name, endAdornment, startAdornment, ...others } = props;
 
   return (
     <TextField
       variant="outlined"
       size="small"
-      color={color || "primary"}
+      color={"secondary"}
       type={type}
       fullWidth={fullWidth}
       name={name}
