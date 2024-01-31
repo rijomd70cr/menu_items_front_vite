@@ -12,7 +12,7 @@ export const config: TypeConfig = {
     basename: '/starter',
     defaultPath: '/dashboard1',
     fontFamily: `'Roboto', sans-serif`,
-    borderRadius: 12
+    borderRadius: 4
 };
 
 export const REACT_APP_VERSION: string = "Version - 1.0";

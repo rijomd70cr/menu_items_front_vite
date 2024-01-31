@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Typography, Link, Box } from '@mui/material';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 import { PageActions, TypeActions } from "./PageActions";
 
@@ -27,7 +28,7 @@ export const PageOutLine = ({ children, actions = [] }: TypePageOutLine) => {
     // const customization = useAppSelector(getCustomizationState);
 
     const PageWrapper = styled('div')(({ theme }) => ({
-        minHeight: '80vh',
+        height: '80vh',
         position: 'relative',
         overflow: 'hidden',
         padding: '8px',
@@ -37,11 +38,13 @@ export const PageOutLine = ({ children, actions = [] }: TypePageOutLine) => {
 
     return (
         <PageWrapper>
-            <PageActions actions={actions} />
-            {children}
-            <Box sx={{ width: '100%', textAlign: 'center', marginTop: 1.5 }}>
-                <Copyright />
-            </Box>
+            <PerfectScrollbar component="div">
+                <PageActions actions={actions} />
+                {children}
+                <Box sx={{ width: '100%', textAlign: 'center', marginTop: 1.5 }}>
+                    <Copyright />
+                </Box>
+            </PerfectScrollbar>
         </PageWrapper>
     )
 }
